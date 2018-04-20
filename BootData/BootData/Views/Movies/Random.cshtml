@@ -1,8 +1,15 @@
-﻿@model BootData.Models.Movie
+﻿@model BootData.Models.MovieViewModel.RandomViewModel
 @{
     ViewBag.Title = "Random";
 }
 
-<h2>Random</h2>
+<h1>Movie Name</h1>
 
-<p>@Model.Name</p>
+
+<p>@Model.Movie.Name</p>
+
+<h1>Customer Name:</h1>
+@foreach(var item in Model.Customer)
+{
+    <p>@item.Name</p>
+}
